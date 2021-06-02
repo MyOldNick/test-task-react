@@ -1,10 +1,19 @@
-.table-item {
+.table {
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
   border: 1px solid #eaeaea;
   border-bottom: none;
+}
+
+.table-item {
   font-size: 14px;
+}
+
+.table-top {
+  background-color: #f5f5f5;
+  color: black;
+  font-weight: bold;
 }
 
 .table-item-red-text {
@@ -19,5 +28,16 @@
   width: 100%;
   max-width: 10%;
   display: flex;
+}
+
+.justify-center {
   justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }

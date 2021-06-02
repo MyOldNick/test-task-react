@@ -14,24 +14,32 @@ import Table from "./components/Table";
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [load, setLoad] = useState(false)
 
   const getData = async () => {
-    const res = await simulateAsyncReq(payload);
 
-    const result = await refactorData(res);
+    setLoad(true)
 
-    sortArr(result);
+    try {
+      const res = await simulateAsyncReq(payload);
 
-    setData(result);
+      const result = await refactorData(res);
+
+      sortArr(result);
+
+      setData(result);
+
+    } catch (error) {
+      alert("Sorry, error");
+    }
+
+    setLoad(false)
   };
 
   return (
     <div className="App">
-      <Button text={"GET DATA"} action={getData} />
-
-      <div>
-        <Table data={data} />
-      </div>
+      <Button text={"Get data"} action={getData} />
+      {load ? <h4>Loading...</h4> : <Table data={data}/>}
     </div>
   );
 };

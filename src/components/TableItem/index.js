@@ -3,22 +3,18 @@ import React from "react";
 //styles
 import "./index.css";
 
-const TableItem = ({ stock, current, change }) => {
+const TableItem = ({ stock, current, change, top }) => {
   return (
-    <div className="table-item">
-      <div className="table-item-col">
-        <p className="table-item-text">{stock}</p>
+    <div className={`table ${top ? "table-top" : "table-item"}`}>
+      <div className="table-item-col justify-start">
+        <p>{stock}</p>
       </div>
-      <div className="table-item-col">
-        <p className="table-item-text">{current}</p>
+      <div className="table-item-col justify-center">
+        <p >{current}</p>
       </div>
-      <div className="table-item-col">
+      <div className="table-item-col justify-end">
         <p
-          className={
-            "table-item-text" && change < 0
-              ? "table-item-red-text"
-              : "table-item-green-text"
-          }
+          className={!top ? change < 0 ? 'table-item-red-text' : 'table-item-green-text ' : ''}
         >
           {change}
         </p>

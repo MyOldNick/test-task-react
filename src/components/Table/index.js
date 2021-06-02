@@ -8,12 +8,7 @@ import TableItem from "../TableItem";
 const Table = ({ data }) => {
   return (
     <div className="table-container">
-      {/* <div className="table-top">
-        <p className="table-top-text">Stock</p>
-        <p className="table-top-text">Current</p>
-        <p className="table-top-text">Change</p>
-      </div> */}
-      <TableItem stock={"Stock"} current={"Current"} change={"Change"} />
+      <TableItem top={true} stock={"Stock"} current={"Current"} change={"Change"} />
       {data?.map(({ stocks, start, current }) => (
         <TableItem
           key={Math.random() * (10000 - 100) + 100}

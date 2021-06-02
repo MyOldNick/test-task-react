@@ -1,4 +1,5 @@
 const sortArr = (array) => {
+  
   array.sort((a, b) => {
     if (a.stocks > b.stocks) {
       return 1;
