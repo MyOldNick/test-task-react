@@ -1,0 +1,23 @@
+.table-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  border: 1px solid #eaeaea;
+  border-bottom: none;
+  font-size: 14px;
+}
+
+.table-item-red-text {
+  color: red;
+}
+
+.table-item-green-text {
+  color: rgb(15, 167, 15);
+}
+
+.table-item-col {
+  width: 100%;
+  max-width: 10%;
+  display: flex;
+  justify-content: center;
+}

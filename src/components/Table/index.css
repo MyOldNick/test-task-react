@@ -1,0 +1,23 @@
+.table-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 10px auto;
+}
+
+.table-container:last-child {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.table-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #eaeaea;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.table-top-text {
+  text-align: center;
+}
